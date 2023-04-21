@@ -1,0 +1,17 @@
+# /etc/systemd/system/speechbox.service
+[Unit]
+Description=SpeechBox App
+After=network-online.target
+
+[Service]
+RestartSec=3
+Restart=always
+Environment=API_PASSWORD=password
+Environment=API_URL=https://speechbox.example.com/
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/java -jar /home/pi/SpeechBox-1.0-standalone.jar
+
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

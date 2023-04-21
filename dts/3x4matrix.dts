@@ -1,0 +1,42 @@
+/dts-v1/;
+/plugin/;
+ / {
+   compatible = "brcm,bcm2835", "brcm,bcm2708", "brcm,bcm2709";
+
+    fragment@0 {
+     target-path = "/";
+     __overlay__ {
+      MATRIX3x4 {
+       compatible = "gpio-matrix-keypad";
+       debounce-delay-ms = <10>;
+	   col-scan-delay-us = <10>;
+
+       row-gpios = <&gpio 17 0
+                    &gpio 27 0
+                    &gpio 22 0
+                    &gpio 26 0>;
+
+       col-gpios = <&gpio 13 0
+                    &gpio 12 0
+                    &gpio 24 0>;
+
+       linux,keymap =
+        <0x000004F   // row 0, col 0, 4F = 79 = KEY_KP1
+         0x0010050   // row 0, col 1, 50 = 80 = KEY_KP2
+         0x0020051   // row 0, col 2, 51 = 81 = KEY_KP3
+
+         0x100004B   // row 1, col 0, 4b = 75 = KEY_KP4
+         0x101004C   // row 1, col 1, 4c = 76 = KEY_KP5
+         0x102004D   // row 1, col 2, 4d = 77 = KEY_KP6
+
+         0x2000047   // row 2, col 0, 47 = 71 = KEY_KP7
+         0x2010048   // row 2, col 1, 48 = 72 = KEY_KP8
+         0x2020049   // row 2, col 2, 47 = 73 = KEY_KP9
+
+         0x3000037   // row 3, col 0, 37 = 55 = KEY_KPASTERISK
+         0x3010052   // row 3, col 1, 52 = 82 = KEY_KP0
+         0x3020062>; // row 3, col 2, 62 = 98 = KEY_KPSLASH (there is no KP_#)
+      };
+     };
+    };
+   };
