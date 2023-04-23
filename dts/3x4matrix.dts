@@ -9,7 +9,7 @@
       MATRIX3x4 {
        compatible = "gpio-matrix-keypad";
        debounce-delay-ms = <10>;
-	   col-scan-delay-us = <10>;
+       col-scan-delay-us = <10>;
 
        row-gpios = <&gpio 17 0
                     &gpio 27 0
