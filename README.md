@@ -166,7 +166,7 @@ The file also contains environment variables that you'll need to customise:
 - =API_PASSWORD=password=
 - =API_URL=https://speechbox.example.com=
 
-If you are developing the software locally, you should customise both environment variables as appropriate and consider setting the ~MOCK~ environment variable to a non-null value so that you don't need to deploy to the Raspberry Pi.
+If you are developing the software locally, you should customise both environment variables as appropriate and consider setting the =MOCK= environment variable to a non-null value so that you don't need to deploy to the Raspberry Pi.
 
 ## License
 Apache 2.0
