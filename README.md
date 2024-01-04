@@ -3,7 +3,7 @@
 
 The system's hardware design and software are all released under the Apache 2.0 license. The hardware enclosure is adapted from the [StreetWise Toolkit](https://github.com/reshaping-the-future/streetwise).
 
-The *SpeechBox* Appliance is implemented as a [State Machine](States.kt) and can easily be extended as well as customised with bespoke [Audio Prompts](resources). The Appliance interacts with the [SpeechBox Server](TODO).
+The *SpeechBox* Appliance is implemented as a [State Machine](States.kt) and can easily be extended as well as customised with bespoke [Audio Prompts](resources). The Appliance interacts with the [SpeechBox Server](https://github.com/unmute-tech/speechbox-api).
 
 ## Component List
 * [Raspberry Pi 3B+](https://thepihut.com/products/raspberry-pi-3-model-b-plus)
